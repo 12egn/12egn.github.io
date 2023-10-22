@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>CatPhotoApp</title>  <!--title元素决定了浏览器在页面的标题栏或选项卡中显示的内容-->
+    <meta charset="UTF-8">  <!--meta元素是自闭合的，设置浏览器行为；属性charset告诉浏览器如何对页面编码-->
+  </head>
+
+  <body>
+    <main> <!--标识此页面的主要部分-->
+      <h1>CatPhotoApp</h1>
+
+      <section>
+        <h2>Cat Photos</h2>
+        <p>  <!--p元素创建一段文本-->
+          See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery. 
+          <!--锚点元素a可以链接到另一页面；target="_blank"属性用于在新标签页中打开链接-->
+        </p>  
+        <a href="https://freecatphotoapp.com">  <!--也可以把图片转换成链接-->
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+          <!--img元素只有自闭合标签；属性是写在一个元素的开始标签中的特殊词汇，它们用于控制这个元素的行为；src属性明确了图片的url（位置）；
+          图片的alt属性作用：1让屏幕阅读器知晓图片内容2当图片无法加载时显示替换文本-->
+        </a> 
+      </section>
+
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>  <!--无序列表元素ul-->
+          <li>cat nip</li>  <!--列表项元素li创建项目-->
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>  <!--figure元素代表独立的内容，并允许你将图像与标题相关联-->
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  <!--图像标题元素figcaption：添加标题描述figure中的图像；强调元素em（斜体）-->
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>  <!--有序列表元素ol（有编号）-->
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  <!--强调元素strong（加粗）-->
+        </figure>
+      </section>
+
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">  <!--表单元素form；action属性指示应该将表单数据发送到哪里-->
+          <fieldset>  <!--fieldset是块级元素，即出现在新的一行；用于在Web表单中将相关的输入和标签组合在一起-->
+            <legend>Is your cat an indoor or outdoor cat?</legend>  <!--legend元素充当fieldset元素的标题-->
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>  
+            <!--input元素是自闭合的，支持多种输入方式；type属性选择输入类型；name属性用以传递表单元素的数据；radio说明这是单选按钮；
+            label元素用于帮助将input元素的文本与input元素本身关联起来，实现点击文本也选择对应单选按钮；id属性用于标识元素，不能有相同的id值
+            checked属性为默认被选中-->
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+            <!--两个按钮具有相同的name属性，以实现选择一个单选按钮自动取消选择另一个；选中时的数据是name-value属性对-->
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <!--checkbox为多选框；另一种方法可以将input元素的文本与元素本身相关联，即在label元素中添加与input元素中id值相同的for属性-->
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>  
+          <!--placeholder属性设置占位符文本，用于提示在输入框中输入的信息；required属性防止用户在缺少所需信息时提交表单-->
+          <button type="submit">Submit</button>   <!--表单按钮默认行为是提交表单到action属性指定位置；然而最好用type属性明确这是个提交按钮；
+          input和button都是内联元素，它们不会出现在新的行上-->
+        </form>
+      </section>
+
+    </main>
+    <footer>
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>

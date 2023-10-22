@@ -1,0 +1,96 @@
+body {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif;  /*更改文本字体*/
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    font-size: 30px;
+  }
+  
+  .established {
+    font-style: italic;  /*斜体*/
+  }
+  
+  h1, h2, p {   /*多个选择器间用,隔开*/
+    text-align: center;  /*属性：文本居中*/
+  }
+  
+  .menu {   /* #menu——id；.menu——class */
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;  
+    margin-right: auto;  /*设置左右页边距*/
+    padding: 20px;     /*padding属性给元素周围留一些空间*/
+    max-width: 500px;
+  }
+  
+  img {
+    display: block;  /*使图片像是块级元素*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:-25px;
+  }
+  
+  hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;   /*设置元素边缘颜色*/
+  }
+  
+  .bottom-line {
+    margin-top: 25px;
+  }
+  
+  h1, h2 {
+    font-family: Impact, serif;  /*用,添加后备值*/
+  }
+  
+  .item p {   /*为所有嵌套在具有item类属性中的p元素设置样式*/
+    display: inline-block;  /*使p元素像是内联元素*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .flavor, .dessert {
+    text-align: left;
+    width: 75%;
+  }
+  
+  .price {
+    text-align: right;
+    width: 25%;
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    font-size: 14px;
+  }
+  
+  .address {
+    margin-bottom: 5px;
+  }
+  
+  a {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {  /*鼠标停在元素时的颜色*/
+    color: brown;
+  }
+  
+  a:active {   /*鼠标点击元素时的颜色*/
+    color: brown;
+  }
